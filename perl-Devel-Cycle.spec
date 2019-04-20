@@ -4,11 +4,11 @@
 #
 Name     : perl-Devel-Cycle
 Version  : 1.12
-Release  : 9
+Release  : 10
 URL      : https://cpan.metacpan.org/authors/id/L/LD/LDS/Devel-Cycle-1.12.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/L/LD/LDS/Devel-Cycle-1.12.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libd/libdevel-cycle-perl/libdevel-cycle-perl_1.12-1.debian.tar.xz
-Summary  : 'Find memory cycles in objects'
+Summary  : Find memory cycles in objects
 Group    : Development/Tools
 License  : Artistic-1.0 GPL-1.0
 Requires: perl-Devel-Cycle-license = %{version}-%{release}
@@ -24,6 +24,7 @@ references.  Here is the synopsis:
 Summary: dev components for the perl-Devel-Cycle package.
 Group: Development
 Provides: perl-Devel-Cycle-devel = %{version}-%{release}
+Requires: perl-Devel-Cycle = %{version}-%{release}
 
 %description dev
 dev components for the perl-Devel-Cycle package.
@@ -42,7 +43,7 @@ license components for the perl-Devel-Cycle package.
 cd ..
 %setup -q -T -D -n Devel-Cycle-1.12 -b 1
 mkdir -p deblicense/
-mv %{_topdir}/BUILD/debian/* %{_topdir}/BUILD/Devel-Cycle-1.12/deblicense/
+cp -r %{_topdir}/BUILD/debian/* %{_topdir}/BUILD/Devel-Cycle-1.12/deblicense/
 
 %build
 export http_proxy=http://127.0.0.1:9/
