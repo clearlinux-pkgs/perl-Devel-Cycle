@@ -4,7 +4,7 @@
 #
 Name     : perl-Devel-Cycle
 Version  : 1.12
-Release  : 13
+Release  : 14
 URL      : https://cpan.metacpan.org/authors/id/L/LD/LDS/Devel-Cycle-1.12.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/L/LD/LDS/Devel-Cycle-1.12.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libd/libdevel-cycle-perl/libdevel-cycle-perl_1.12-1.debian.tar.xz
@@ -79,7 +79,7 @@ make TEST_VERBOSE=1 test
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/perl-Devel-Cycle
-cp %{_builddir}/Devel-Cycle-1.12/deblicense/copyright %{buildroot}/usr/share/package-licenses/perl-Devel-Cycle/1c6d61d9b65d4b94f9ab026cdfef98875a3efc91
+cp %{_builddir}/debian/copyright %{buildroot}/usr/share/package-licenses/perl-Devel-Cycle/1c6d61d9b65d4b94f9ab026cdfef98875a3efc91
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -103,4 +103,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/Devel/Cycle.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Devel/Cycle.pm
