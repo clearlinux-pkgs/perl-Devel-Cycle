@@ -4,7 +4,7 @@
 #
 Name     : perl-Devel-Cycle
 Version  : 1.12
-Release  : 15
+Release  : 16
 URL      : https://cpan.metacpan.org/authors/id/L/LD/LDS/Devel-Cycle-1.12.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/L/LD/LDS/Devel-Cycle-1.12.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libd/libdevel-cycle-perl/libdevel-cycle-perl_1.12-1.debian.tar.xz
@@ -103,4 +103,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.3/Devel/Cycle.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Devel/Cycle.pm
